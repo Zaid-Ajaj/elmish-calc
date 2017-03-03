@@ -98,31 +98,31 @@ let update (PushInput input) (InputStack xs)  =
 // Here comes the view
 let digitStyle = 
     Style [
-        unbox ("height", "40px")
+        Height 40
+        Padding 15
+        TextAlign "center"
+        Margin 5
+        VerticalAlign "middle"
+        BackgroundColor "lightgreen"
         unbox ("width", "55px")
         unbox ("font-size","24px")
         unbox ("cursor","pointer")
-        unbox ("padding", "15px")
-        unbox ("margin","5px")
-        unbox ("text-align","center")
-        unbox ("vertical-align","middle")
         unbox ("line-height","40px")
-        unbox ("background-color", "lightgreen")
         unbox ("box-shadow", "0 0 3px black")
     ]
 
 let opButtonStyle = 
     Style [
-        unbox ("height", "40px")
+        Height 40
+        Padding 15
+        TextAlign "center"
+        Margin 5
+        VerticalAlign "middle"
+        BackgroundColor "lightblue"
         unbox ("width", "55px")
         unbox ("font-size","24px")
-        unbox ("padding", "15px")
-        unbox ("text-align","center")
-        unbox ("vertical-align","middle")
         unbox ("line-height","40px")
         unbox ("cursor","pointer")
-        unbox ("margin","5px")
-        unbox ("background-color","lightblue")
         unbox ("box-shadow", "0 0 3px black")
     ]
 let calcStyle = 
@@ -179,7 +179,7 @@ let view model dispatch =
       [ calcStyle ]
       [
             h2 
-              [ Style [ unbox ("padding-left", "20px"); unbox ("height", "30px")] ]
+              [ Style [ PaddingLeft "20px"; Height "30px"] ]
               [ text (modelString model) ]
             br [] []
             table 
